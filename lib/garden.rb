@@ -1,4 +1,6 @@
 # Something is missing here
+require 'pry'
+require_relative './plant.rb'
 
 class Garden
   attr_accessor :name
@@ -8,6 +10,7 @@ class Garden
   end
 
   def plants
+    binding.pry
     Plant.all.select do |plant|
       plant.garden == self
     end
